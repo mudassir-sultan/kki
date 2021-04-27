@@ -439,6 +439,17 @@ button:focus {
 
 /*-- Service --*/
 
+.service-areas {
+    position: relative;
+    top: -73px;
+    left: 0;
+    padding-top: 1px;
+    padding-bottom: 15px;
+    width: 100%;
+    z-index: 999;
+    height: auto;
+}
+
 .service-item {
     text-align: center;
     /* padding: 30px 30px 28px; */
@@ -926,20 +937,78 @@ button:focus {
 }
 
 .cost-img img:hover {
-    transform: translateY(-10px);
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transform: translateY(-8px);
 }
 
-.cost-img img:hover .play-video {
-    text-shadow: 58px 0px 40px rgb(0 0 0 / 0%);
+.cost-img .play-video {
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
 }
 
-.play-video {
+.about-img-wrap {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+.eicon-play {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.eicon-play>i {
+    color: #ff0754;
+    font-size: 40px;
+    text-shadow: 58px 0px 40px rgb(0 0 0 / 0%);
+    width: 80px;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.eicon-play>i::before {
+    color: #fa0752;
+    position: relative;
+    z-index: 1;
+}
+
+.eicon-play>i::after {
+    background: #fff;
+    width: calc( 100% - 5px);
+    height: calc( 100% - 5px);
+    display: block;
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    border: 5px solid #fa0752;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.about-img-wrap:hover .eicon-play>i::after {
+    box-shadow: 0 0 40px #fff;
+    transform: scale(1.1);
 }
 
 .cost-area .cost-img img {
@@ -959,16 +1028,19 @@ footer {
     margin-bottom: 30px;
 }
 
-.footer-item ul {
+.footer-item ul,
+.footer-touch ul {
     margin: 0;
     padding: 0;
 }
 
-.footer-item ul li {
+.footer-item ul li,
+.footer-touch ul li {
     list-style-type: none;
 }
 
-.footer-item ul li a {
+.footer-item ul li a,
+.footer-touch ul li a {
     position: relative;
     font-size: 16px;
     line-height: 36px;
@@ -1024,20 +1096,37 @@ footer {
 }
 
 .footer-touch {
+    width: 70%;
     font-weight: bold;
     font-family: "Open Sans";
 }
 
-.footer-touch li a {
+.footer-touch ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+}
+
+.footer-touch ul li a {
     color: #4b4b4b;
     font-size: 16px;
-    line-height: 1.5;
+    display: block;
+    line-height: normal;
+}
+
+.footer-touch ul li i {
+    width: 50px;
+    padding-top: 5px;
+    font-size: 30px;
 }
 
 .footer-touch li span {
     width: 80%;
     color: #4b4b4b;
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
 }
 

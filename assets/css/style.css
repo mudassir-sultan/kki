@@ -1738,6 +1738,19 @@ footer {
     list-style-type: none;
 }
 
+.child-item>li {
+    margin: 0 0 14px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    padding-left: 0;
+    position: relative;
+    list-style-type: none;
+    margin: 10px 0 0;
+    padding-left: 12px;
+}
+
 .sidebar-widget .widget .accordion p {
     display: none;
     font-size: small;
@@ -1755,6 +1768,8 @@ footer {
     font-size: small;
     cursor: pointer;
     padding-right: 3px;
+    width: 100%;
+    display: block;
 }
 
 .sidebar-widget .widget .accordion .count {
@@ -1775,7 +1790,41 @@ footer {
     content: ")";
 }
 
-.sidebar-widget .widget .accordion a:after {
+
+/* .sidebar-widget .widget .accordion a:after {
+    font-family: 'themify';
+    position: absolute;
+    right: 0;
+    content: "\e61a";
+    top: 0;
+    color: #fa0752;
+    font-size: 12px;
+    font-weight: 500;
+} */
+
+.sidebar-widget .widget .accordion li a.active:after {
+    font-family: 'themify';
+    position: absolute;
+    right: 0;
+    content: "\e622";
+    font-size: 12px;
+    color: #fa0752;
+    font-weight: 500;
+}
+
+.parrent-item {
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Safari 3.1+ */
+    -moz-user-select: none;
+    /* Firefox 2+ */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    position: relative;
+}
+
+.parrent-item::before {
     font-family: 'themify';
     position: absolute;
     right: 0;
@@ -1786,7 +1835,7 @@ footer {
     font-weight: 500;
 }
 
-.sidebar-widget .widget .accordion li a.active:after {
+.close::before {
     font-family: 'themify';
     position: absolute;
     right: 0;
@@ -1794,6 +1843,15 @@ footer {
     font-size: 12px;
     color: #fa0752;
     font-weight: 500;
+}
+
+.child-item {
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+.isActive {
+    display: block;
 }
 
 

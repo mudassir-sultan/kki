@@ -84,6 +84,24 @@ button:focus {
     font-family: Nunito;
 }
 
+.heading-title-2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-style: normal;
+    font-family: Nunito;
+}
+
+.txt-paragraph {
+    font-family: "Open Sans";
+    line-height: 26px;
+    font-weight: 400;
+    font-style: normal;
+    color: #4b4b4b;
+    font-size: 16px;
+}
+
 
 /* --------------------------- */
 
@@ -1701,6 +1719,162 @@ footer {
     padding: 0;
     color: inherit;
     font-size: inherit;
+}
+
+
+/* --------------------------------
+      Product Details | Page
+----------------------------------*/
+
+
+/* Bacground Img change dynamically */
+
+.bg-product-detail {
+    background: linear-gradient(0deg, rgba(0, 20, 67, 0.5), rgba(0, 20, 67, 0.5)), url(../../assets/images/angelina-litvin-32201-unsplash.jpg);
+    background-position: center;
+}
+
+.product-meta {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #eee;
+    padding: 40px;
+}
+
+.product-meta-2 {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: #eee;
+    padding: 25px;
+}
+
+.product-meta>span {
+    display: block;
+    border-bottom: 1px solid #a4a4a4;
+    padding: 5px 0;
+}
+
+.product-meta>span b {
+    display: inline-block;
+    width: 150px;
+}
+
+.product-meta-2>span b {
+    display: inline-block;
+    width: 150px;
+}
+
+.product-meta>span b {
+    font-family: "Open Sans";
+    line-height: 26px;
+    font-weight: bolder;
+    font-style: normal;
+    color: #4b4b4b;
+    font-size: 20px;
+}
+
+.product-meta-2>span b {
+    font-family: "Open Sans";
+    line-height: 26px;
+    font-weight: bolder;
+    font-style: normal;
+    color: #292929;
+    font-size: 20px;
+}
+
+.product-meta>span a,
+.product-meta-2>span a {
+    color: #424242;
+    font-size: 16px;
+}
+
+.icon-emoji {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    z-index: 9;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 100%;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-emoji::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 100%;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    background: #fff;
+    box-sizing: content-box;
+}
+
+.icon-emoji::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #000;
+    border-radius: 6px;
+    position: absolute;
+    top: 19px;
+    left: 22px;
+    -webkit-transform: rotate( -45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate( -45deg);
+    box-sizing: content-box;
+}
+
+.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+
+/* --- tabs --- */
+
+#pills-tab {
+    margin-bottom: 70px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.nav-pills li:first-child .nav-link {
+    padding-left: 0;
+}
+
+.nav-pills .nav-link {
+    font-weight: bolder;
+    padding: 16px 20px;
+}
+
+.nav-pills .nav-link.active {
+    color: #fa0752;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom: 2px solid #fa0752;
+}
+
+section.details-tabs {
+    background-color: #fff;
 }
 
 

@@ -173,7 +173,7 @@ jQuery(function($) {
     for (i = 0; i < toggler.length; i++) {
         toggler[i].addEventListener("click", function() {
             this.parentElement.querySelector(".child-item").classList.toggle("isActive");
-            this.classList.toggle("close");
+            this.classList.toggle("check-box");
         });
     }
 

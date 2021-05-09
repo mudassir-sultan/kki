@@ -84,24 +84,6 @@ button:focus {
     font-family: Nunito;
 }
 
-.heading-title-2 {
-    color: #333;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    font-style: normal;
-    font-family: Nunito;
-}
-
-.txt-paragraph {
-    font-family: "Open Sans";
-    line-height: 26px;
-    font-weight: 400;
-    font-style: normal;
-    color: #4b4b4b;
-    font-size: 16px;
-}
-
 
 /* --------------------------- */
 
@@ -1539,9 +1521,9 @@ footer {
 
 .products-catalog .product-item {
     margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 2px;
     box-sizing: border-box;
-    border: 1px solid #E0E0E0;
+    border: 2px solid #f7f7f7;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -1560,22 +1542,27 @@ footer {
     overflow: hidden;
     position: relative;
     text-decoration: none;
-    border-radius: 10px 0 0 10px;
+    padding: 10px;
+    /* setHeight */
+    height: 240px;
 }
 
 .products-catalog .product-item .product-item-image>img {
-    height: auto;
-    border-radius: auto;
+    /* height: auto; */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .products-catalog .product-item-content {
     overflow: hidden;
-    padding: 20px 30px 15px;
+    padding: 20px 16px 15px;
+    background-color: #f7f7f7;
 }
 
 .products-catalog .product-item-title {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 30px;
     letter-spacing: -0.02em;
     color: #000000;
@@ -1612,12 +1599,7 @@ footer {
 
 .products-catalog .product-item-content-bottom {
     overflow: hidden;
-}
-
-.products-catalog .product-item-content-bottom::after {
-    display: table;
-    content: "";
-    clear: both;
+    float: right;
 }
 
 .products-catalog .product-item-content .product-item-content-bottom .product-item-price {
@@ -1632,11 +1614,14 @@ footer {
 }
 
 .products-catalog .product-item-content .product-item-content-bottom .product-item-addcart {
-    padding: 12px 20px;
+    /* padding: 12px 20px; */
+    padding: 10px 20px;
     font-weight: 500;
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: small;
     line-height: 12px;
-    height: 40px;
+    /* height: 40px; */
+    height: 35px;
     min-width: 110px;
     text-align: center;
     border-radius: 30px;
@@ -1730,7 +1715,7 @@ footer {
 /* Bacground Img change dynamically */
 
 .bg-product-detail {
-    background: linear-gradient(0deg, rgba(0, 20, 67, 0.5), rgba(0, 20, 67, 0.5)), url(../../assets/images/angelina-litvin-32201-unsplash.jpg);
+    background: linear-gradient(0deg, rgba(0, 20, 67, 0.5), rgba(0, 20, 67, 0.5)), url(../../assets/images/products/product-3.jpg);
     background-position: center;
 }
 
@@ -1875,6 +1860,105 @@ footer {
 
 section.details-tabs {
     background-color: #fff;
+}
+
+
+/*-- enquiry tab--*/
+
+.enquiry-tab .contact-item {
+    margin-bottom: 30px;
+}
+
+.enquiry-tab .contact-right h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.enquiry-tab .contact-right .form-group {
+    margin-bottom: 25px;
+}
+
+.enquiry-tab .contact-right .form-group label {
+    font-weight: bolder;
+}
+
+.enquiry-tab .contact-right .form-group .form-control {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    height: 50px;
+    font-size: 14px;
+}
+
+.enquiry-tab .contact-right .form-group .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #e5e5e5;
+}
+
+.enquiry-tab .contact-right .form-group textarea {
+    height: auto !important;
+    padding-top: 15px;
+}
+
+.enquiry-tab .contact-right .form-group .list-unstyled {
+    color: #dc3545;
+    font-size: 14px;
+}
+
+.enquiry-tab .contact-right .contact-btn {
+    background-color: #ff0754;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 6px;
+    padding: 12px 0;
+    text-transform: capitalize;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    opacity: 1;
+    font-weight: 600;
+}
+
+.enquiry-tab .contact-right .contact-btn:hover,
+.enquiry-tab .contact-right .contact-btn:active,
+.enquiry-tab .contact-right .contact-btn:focus {
+    background-color: #d40b49;
+}
+
+.enquiry-tab .contact-right .cusmtom-error {
+    font-size: 1rem;
+    margin-top: 50px;
+    color: #4b4b4b;
+    border: 2px solid #ffb900;
+    padding: 5px 12px;
+    border-radius: 10px;
+}
+
+.enquiry-tab .contact-right .text-success {
+    font-size: 20px;
+    margin-top: 12px;
+    color: #28a745;
+}
+
+.enquiry-tab .form-inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.enquiry-tab .form-inline .form-check {
+    margin-right: 1rem;
+}
+
+.enquiry-tab .form-inline .form-check label {
+    font-weight: normal;
+}
+
+.enquiry-tab .form-group .label {
+    font-weight: bold;
 }
 
 
@@ -2030,3 +2114,149 @@ section.details-tabs {
 
 
 /*----- End FAQ CSS -----*/
+
+
+/*----- Contact CSS -----*/
+
+.contact-area .contact-item {
+    margin-bottom: 30px;
+}
+
+.contact-area .contact-left h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.contact-area .contact-left p {
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.contact-area .contact-left ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contact-area .contact-left ul li {
+    list-style-type: none;
+    display: block;
+    color: #282828;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dddddd69;
+    padding-bottom: 20px;
+}
+
+.contact-area .contact-left ul li:last-child {
+    margin-bottom: 0;
+}
+
+.contact-area .contact-left ul li i {
+    font-size: 21px;
+    color: #282828;
+    margin-right: 5px;
+    position: relative;
+    bottom: -5px;
+}
+
+.contact-area .contact-left ul li a {
+    display: inline-block;
+    color: #282828;
+}
+
+.contact-area .contact-left ul li a:hover {
+    color: #fa5f0b;
+}
+
+.contact-area .contact-right h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.contact-area .contact-right .form-group {
+    margin-bottom: 25px;
+}
+
+.contact-area .contact-right .form-group .form-control {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    height: 50px;
+    font-size: 14px;
+}
+
+.contact-area .contact-right .form-group .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #e5e5e5;
+}
+
+.contact-area .contact-right .form-group textarea {
+    height: auto !important;
+    padding-top: 15px;
+}
+
+.contact-area .contact-right .form-group ::-webkit-input-placeholder {
+    opacity: .5;
+    color: #3a426d;
+    text-align: center;
+}
+
+.contact-area .contact-right .form-group :-ms-input-placeholder {
+    opacity: .5;
+    color: #3a426d;
+    text-align: center;
+}
+
+.contact-area .contact-right .form-group ::-ms-input-placeholder {
+    opacity: .5;
+    color: #3a426d;
+    text-align: center;
+}
+
+.contact-area .contact-right .form-group ::placeholder {
+    opacity: .5;
+    color: #3a426d;
+    text-align: center;
+}
+
+.contact-area .contact-right .form-group .list-unstyled {
+    color: #dc3545;
+    font-size: 14px;
+}
+
+.contact-area .contact-right .contact-btn {
+    background-color: #ff0754;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 6px;
+    padding: 12px 0;
+    text-transform: capitalize;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    opacity: 1;
+    font-weight: 600;
+}
+
+.contact-area .contact-right .contact-btn:hover,
+.contact-area .contact-right .contact-btn:active,
+.contact-area .contact-right .contact-btn:focus {
+    background-color: #d40b49;
+}
+
+.contact-area .contact-right .cusmtom-error {
+    font-size: 1rem;
+    margin-top: 50px;
+    color: #4b4b4b;
+    border: 2px solid #ffb900;
+    padding: 5px 12px;
+    border-radius: 10px;
+}
+
+.contact-area .contact-right .text-success {
+    font-size: 20px;
+    margin-top: 12px;
+    color: #28a745;
+}

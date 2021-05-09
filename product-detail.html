@@ -83,7 +83,7 @@
                             <li class="nav-item"> <a href="about.html" class="nav-link">About Us</a> </li>
                             <li class="nav-item"> <a href="javascript:void(info)" class="nav-link">Services </a> </li>
                             <li class="nav-item"> <a href="product-category.html" class="nav-link active">Products </a> </li>
-                            <li class="nav-item"> <a href="javascript:void(info)" class="nav-link">Contact Us</a> </li>
+                            <li class="nav-item"> <a href="contact.html" class="nav-link">Contact Us</a> </li>
                         </ul>
                     </div>
                 </nav>
@@ -177,19 +177,7 @@
                             <button class="nav-link active" id="pills-description-tab" data-bs-toggle="pill" data-bs-target="#pills-description" type="button" role="tab" aria-controls="pills-description" aria-selected="true">Description</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-related-products-tab" data-bs-toggle="pill" data-bs-target="#pills-related-products" type="button" role="tab" aria-controls="pills-related-products" aria-selected="false">Related Products</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-certificates-tab" data-bs-toggle="pill" data-bs-target="#pills-certificates" type="button" role="tab" aria-controls="pills-certificates" aria-selected="false">Certificates</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-trim-products-tab" data-bs-toggle="pill" data-bs-target="#pills-trim-products" type="button" role="tab" aria-controls="pills-trim-products" aria-selected="true">Trim Products</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-enquiry-tab" data-bs-toggle="pill" data-bs-target="#pills-enquiry" type="button" role="tab" aria-controls="pills-enquiry" aria-selected="false">Enquiry</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-reviews-tab" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="false"> Reviews (0)</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
@@ -218,25 +206,91 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="pills-related-products" role="tabpanel" aria-labelledby="pills-related-products-tab">
-                            <p class="txt-paragraph">Related Products</p>
-                        </div>
-                        <div class="tab-pane fade" id="pills-certificates" role="tabpanel" aria-labelledby="pills-certificates-tab">
-                            <p class="txt-paragraph">Certificates</p>
-                        </div>
-                        <div class="tab-pane fade" id="pills-trim-products" role="tabpanel" aria-labelledby="pills-trim-products-tab">
-                            <p class="txt-paragraph">Trim products</p>
-                        </div>
-                        <div class="tab-pane fade" id="pills-enquiry" role="tabpanel" aria-labelledby="pills-enquiry-tab">
-                            <p class="txt-paragraph">Enquiry</p>
-                        </div>
-                        <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
-                            <p class="txt-paragraph">Reviews</p>
-                        </div>
 
+                        <div class="tab-pane fade enquiry-tab" id="pills-enquiry" role="tabpanel" aria-labelledby="pills-enquiry-tab">
+                            <div class="contact-item contact-right">
+                                <form id="contactForm" novalidate="true">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="name">Name &#x2a;</label>
+                                                <input type="text" name="name" id="name" class="form-control" required="" data-error="the field is required">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="company">Company</label>
+                                                <input type="name" name="name" id="company" class="form-control" required="" data-error="the field is required">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="company">Email &#x2a;</label>
+                                                <input type="email" name="email" id="email" class="form-control" required="" data-error="the field is required">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="country">Country</label>
+                                                <select class="form-control" id="country">
+                                                  <option></option>
+                                                  <option>2</option>
+                                                  <option>3</option>
+                                                  <option>4</option>
+                                                  <option>5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="phone">Message &#x2a;</label>
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="8" required="" data-error="Write your message"></textarea>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="phone">Phone</label>
+                                                <input type="text" name="phone_number" id="phone_number" required="" data-error="the field is required" class="form-control">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+
+                                            <div class="form-group pt-3">
+                                                <span class="label  pb-2 d-block">Business &#x2a;</span>
+                                                <div class="form-inline">
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="Manufacturer">
+                                                        <label class="form-check-label" for="Manufacturer">Manufacturer</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="Distributor">
+                                                        <label class="form-check-label" for="Distributor">Distributor</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="Retailer">
+                                                        <label class="form-check-label" for="Retailer">Retailer</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-12">
+                                        <button type="submit" class="contact-btn btn disabled" style="pointer-events: all; cursor: pointer;">
+                                                Submit
+                                            </button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                            </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!--  -->
@@ -337,12 +391,12 @@
     <!-- zoom | product -->
     <script>
         var urls = [
-            'https://www.kki.com.pk/test/wp-content/uploads/2018/08/angelina-litvin-32201-unsplash-660x440.jpg',
-            'https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014__340.jpg',
-            'https://source.unsplash.com/u4gwRbr2_j0/600x350',
-            'https://source.unsplash.com/h0s58n-8R6w/600x350',
-            'https://source.unsplash.com/jQ2_DWnIX7Y/600x350',
-            'https://source.unsplash.com/u4gwRbr2_j0/600x350'
+            'assets/images/products/product-3.jpg',
+            'assets/images/products/product-5.jpg',
+            'assets/images/products/product-4.jpg',
+            'assets/images/products/product-6.jpg',
+            'assets/images/products/product-7.jpg',
+            'assets/images/products/product-4.jpg'
         ];
         var options = {
             //thumbLeft:true,
